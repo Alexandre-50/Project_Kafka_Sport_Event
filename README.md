@@ -61,7 +61,8 @@ cd Project_Kafka_Sport/project
 From the `project/` directory:
 
 ```bash
-docker compose up -d
+C:\kafka
+dir
 ```
 This will start:
 - `rt-sport-zookeeper` (Zookeeper)
@@ -69,5 +70,8 @@ This will start:
 - `rt-sport-kafdrop` (Kafka UI on port 9000)
   
 ## Screenshots
+Launching Kafka
+<img width="633" height="358" alt="Capture d’écran (6172)" src="https://github.com/user-attachments/assets/b6efb773-f3b4-4156-b966-ebc52ce29d26" />
+
 
 
