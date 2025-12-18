@@ -56,6 +56,5 @@ git clone <your-github-url> Project_Kafka_Sport
 cd Project_Kafka_Sport/project
 ```
 ## Screenshots
-<img width="625" height="403" alt="Capture d’écran (6165)" src="https://github.com/user-attachments/assets/92f4a7e7-5b7c-4b3b-a5ac-c1c5f2efdf67" />
 
 
