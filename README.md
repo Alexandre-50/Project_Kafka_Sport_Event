@@ -55,6 +55,19 @@ project/
 git clone <your-github-url> Project_Kafka_Sport
 cd Project_Kafka_Sport/project
 ```
+
+### 2. Start Kafka (with Docker Compose)
+
+From the `project/` directory:
+
+```bash
+docker compose up -d
+```
+This will start:
+- `rt-sport-zookeeper` (Zookeeper)
+- `rt-sport-kafka` (Kafka broker)
+- `rt-sport-kafdrop` (Kafka UI on port 9000)
+  
 ## Screenshots
 
 
