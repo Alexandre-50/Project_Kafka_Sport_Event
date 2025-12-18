@@ -1,5 +1,23 @@
-# Project_Kafka_Sport_Event
-Real-time streaming of sports events using the messagin system Apache Kafka.
+
+# Kafka_Sport_Event 
+
+## Project description
+This project implements a **real-time sport events streaming pipeline** using **Apache Kafka** in the context of a Big Data course project.
+The objective is to simulate **live sport events** (such as goals, fouls, substitutions, match start or end) that are continuously produced by a data source and immediately consumed by one or more consumer applications. This represent real-world scenarios where sport data must be processed and delivered with very low latency, for example for live score applications, real-time dashboards, or analytics platforms.
+
+---
+
+## Chosen Big Data tool
+The main Big Data tool used in this project is **Apache Kafka**.
+Apache Kafka is a **distributed event streaming platform** designed to handle large volumes of data with high throughput and low latency. It allows applications to publish, store, and consume streams of records in real time. Kafka is widely adopted in industry and is a central component of many Big Data architectures.
+
+---
+
+## Why use technology Apache Kafka ?
+We chose **Apache Kafka** because it is particularly well suited for handling **continuous and real-time data streams**, such as live sport events (goals, fouls, substitutions, match status updates).
+Kafka makes it possible to **publish and consume messages with very low latency**, while ensuring reliability, scalability, and a clear separation between producers and consumers. This decoupling allows different applications to consume the same stream of sport events independently, without impacting the data producers.
+Kafka can also **store events durably**, meaning that messages are not lost even if a consumer application is not running at the time of production. Consumers can later replay past events using offsets, which is a key advantage in real-time systems.
+For these reasons, Apache Kafka is an ideal solution for a **real-time sport events streaming project**.
 
 ## Repository structure
 ```text
@@ -18,6 +36,4 @@ project/
     run_producer.sh         # Convenience script to run the Python producer
     run_consumer.sh         # Convenience script to run the Python consumer
 ```
-You can push the `project/` folder as the root of your GitHub repository.
-
 ---
