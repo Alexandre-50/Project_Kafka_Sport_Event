@@ -19,16 +19,16 @@ Kafka makes it possible to **publish and consume messages with very low latency*
 Kafka can also **store events durably**, meaning that messages are not lost even if a consumer application is not running at the time of production. Consumers can later replay past events using offsets, which is a key advantage in real-time systems.
 For these reasons, Apache Kafka is an ideal solution for a **real-time sport events streaming project**.
 
-## Repository structure
+## Project structure
 ```text
 project/
-  docker-compose.yml        # Docker Compose for Zookeeper, Kafka (Bitnami), and Kafdrop UI
+  docker-compose.yml        # Docker Compose for Zookeeper, Kafka
   requirements.txt          # Python dependencies for producer and consumer
-  .env.example              # Example environment variables for local setup
-  sample_events.json        # Example sport event messages (for reference)
+  .env.example              # Environment variables for local setup
+  sample_events.json        # Sport event messages 
 
   src/
-    producer.py             # Kafka producer simulating real-time sport match events
+    producer.py             # Kafka producer simulating real-time football match 
     consumer.py             # Kafka consumer showing events and live statistics
 
   scripts/
@@ -36,4 +36,14 @@ project/
     run_producer.sh         # Convenience script to run the Python producer
     run_consumer.sh         # Convenience script to run the Python consumer
 ```
+---
+## Prerequisites
+
+- **Docker** and **Docker Compose** installed
+- **Python 3.9+** installed locally
+- Git Bash  
+  On Windows PowerShell you can either:
+  - Run the commands manually, or
+  - Use WSL/Git Bash to execute the shell scripts.
+
 ---
