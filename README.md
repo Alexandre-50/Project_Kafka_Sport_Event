@@ -44,6 +44,16 @@ project/
 - Git Bash  
   On Windows PowerShell you can either:
   - Run the commands manually, or
-  - Use WSL/Git Bash to execute the shell scripts.
-
+  - Use Git Bash to execute the different shell scripts.
 ---
+
+## Installation and setup
+
+### 1. You can clone and enter the project (optionnal)
+
+```bash
+git clone <your-github-url> Project_Kafka_Sport
+cd Project_Kafka_Sport/project
+```
+
+
