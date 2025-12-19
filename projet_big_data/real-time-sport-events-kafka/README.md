@@ -63,7 +63,8 @@ real-time-sport-events-kafka/
     .\.venv\Scripts\Activate.ps1
     pip install -r requirements.txt
     ```
-
+    <img width="1600" height="99" alt="image" src="https://github.com/user-attachments/assets/27e75e7b-c73b-4e5a-9695-06df1593366d" />
+    <img width="1600" height="145" alt="image" src="https://github.com/user-attachments/assets/41de6624-cb9d-4947-ab9d-18f5f5038073" />
 ---
 
 ## Minimal Working Example (The Logic)
@@ -135,6 +136,7 @@ One specific challenge I encountered was connecting to Kafka running in Docker f
 
 ### Visualizing Real-time Data
 Reading scrolling text logs was difficult to follow. I decided to implement a cleaner UI using the `rich` Python library. It allowed me to create a table that updates in place, making it much easier to verify that the "Events per Match" aggregation was actually working correctly in real-time.
+
 
 
 
