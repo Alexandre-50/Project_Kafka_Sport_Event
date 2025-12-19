@@ -13,7 +13,16 @@ In this project:
 - Kafka acts as the **central message broker**
 - ZooKeeper manages broker coordination and metadata
 - Python applications act as **producer** and **consumer**
+- **Docker** ensures reproducible deployment
 
+## Why we Selected This Tool ?
+We selected Apache Kafka for several reasons:
+
+First, Kafka is a **core technology in modern Big Data architectures**. It is designed to handle large volumes of streaming data with **low latency** and **high reliability**, which makes it ideal for real-time use cases such as live sports analytics, financial transactions, or IoT streams.
+
+Second, Kafka enforces a **decoupled architecture** between producers and consumers. In this project, the event generator does not need to know how the data is consumed. This separation mirrors real-world systems where the same data stream can be consumed by dashboards, databases, or machine learning pipelines simultaneously.
+
+Finally, Kafka integrates naturally with many other Big Data tools (Spark Streaming, Flink, Hadoop, Data Lakes), making it an excellent foundation for scalable data ecosystems.
 ---
 
 ## Folder Structure
@@ -36,7 +45,6 @@ real-time-sport-events-kafka/
 │ └─ sample_output.jsonl    # Persisted data output
 └─ screenshots/             # Proof of execution
 ```
-
 ---
 
 ## Installation & Setup
@@ -141,6 +149,7 @@ One specific challenge I encountered was connecting to Kafka running in Docker f
 
 ### Visualizing Real-time Data
 Reading scrolling text logs was difficult to follow. I decided to implement a cleaner UI using the `rich` Python library. It allowed me to create a table that updates in place, making it much easier to verify that the "Events per Match" aggregation was actually working correctly in real-time.
+
 
 
 
