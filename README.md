@@ -68,7 +68,11 @@ This will start:
 - `rt-sport-zookeeper` (Zookeeper)
 - `rt-sport-kafka` (Kafka broker)
 - `rt-sport-kafdrop` (Kafka UI on port 9000)
-  
+Then, we use the following command to install different librairies :
+```bash
+PS C:\Users\arcis\real-time-sport-events-kafka\real-time-sport-events-kafka> docker compose up -d
+PS C:\Users\arcis\real-time-sport-events-kafka\real-time-sport-events-kafka> docker ps
+```
 ## Screenshots
 Launching Kafka
 <img width="633" height="358" alt="Capture d’écran (6172)" src="https://github.com/user-attachments/assets/b6efb773-f3b4-4156-b966-ebc52ce29d26" />
