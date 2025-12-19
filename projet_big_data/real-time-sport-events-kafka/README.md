@@ -121,7 +121,7 @@ zookeeper           confluentinc/cp-zookeeper:7.6.1   Up
 {"event_id": "81a9241...", "event_type": "FOUL", "match_id": "match-2", "minute": 13, "payload": {"severity": "high"}}
 {"event_id": "92b1562...", "event_type": "YELLOW_CARD", "match_id": "match-1", "minute": 15, "payload": {"reason": "tackle"}}
 ```
-![WhatsApp Image 2025-12-19 at 14 15 21](https://github.com/user-attachments/assets/7db1f6cc-ffff-407c-bea0-221cf7e63fd1)
+![WhatsApp Image 2025-12-19 at 14 15 21](https://github.com/user-attachments/assets/1fb4974f-b4e7-4280-b830-938516c4519c)
 ---
 
 ## Challenges & My Setup Notes
@@ -135,6 +135,7 @@ One specific challenge I encountered was connecting to Kafka running in Docker f
 
 ### Visualizing Real-time Data
 Reading scrolling text logs was difficult to follow. I decided to implement a cleaner UI using the `rich` Python library. It allowed me to create a table that updates in place, making it much easier to verify that the "Events per Match" aggregation was actually working correctly in real-time.
+
 
 
 
