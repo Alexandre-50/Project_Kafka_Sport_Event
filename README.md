@@ -76,6 +76,9 @@ PS C:\Users\arcis\real-time-sport-events-kafka\real-time-sport-events-kafka> doc
 ## Screenshots
 Launching Kafka
 <img width="633" height="358" alt="Capture d’écran (6172)" src="https://github.com/user-attachments/assets/b6efb773-f3b4-4156-b966-ebc52ce29d26" />
+Installation phase (docker-compose.yml)
+<img width="1600" height="896" alt="image" src="https://github.com/user-attachments/assets/988547d1-3bcc-4090-90d7-ab4fb27788bc" />
+
 
 
 
