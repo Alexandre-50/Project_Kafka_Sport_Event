@@ -70,6 +70,10 @@ real-time-sport-events-kafka/
     - Kafka broker (internal 9092, external 29092)
     - Kafka UI (port 8080)
 
+    <img width="1600" height="896" alt="image" src="https://github.com/user-attachments/assets/eff6d959-ea59-4df9-b983-540e8a91bd18" />
+    <img width="1600" height="553" alt="image" src="https://github.com/user-attachments/assets/ddd08531-b4ca-442d-ab0d-7aa2ef4da33d" />
+
+
 4.  **Create the Kafka Topic**:
     ```bash
     # Using the provided script
@@ -157,6 +161,7 @@ One specific challenge I encountered was connecting to Kafka running in Docker f
 
 ### Visualizing Real-time Data
 Reading scrolling text logs was difficult to follow. I decided to implement a cleaner UI using the `rich` Python library. It allowed me to create a table that updates in place, making it much easier to verify that the "Events per Match" aggregation was actually working correctly in real-time.
+
 
 
 
