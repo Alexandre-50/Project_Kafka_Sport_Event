@@ -1,4 +1,4 @@
-# Football Events Stream with Kafka
+<img width="1600" height="188" alt="image" src="https://github.com/user-attachments/assets/739474d5-4647-4a4d-8f19-1103be2b15ff" /># Football Events Stream with Kafka
 
 ## Project Overview
 This project implements a **real-time event streaming pipeline** using **Apache Kafka** running on Docker.
@@ -69,17 +69,21 @@ real-time-sport-events-kafka/
     - ZooKeeper (port 2181)
     - Kafka broker (internal 9092, external 29092)
     - Kafka UI (port 8080)
-
+  
+    Launching Docker with container Kafka, Zookeeper :
     <img width="1600" height="896" alt="image" src="https://github.com/user-attachments/assets/eff6d959-ea59-4df9-b983-540e8a91bd18" />
-    <img width="1600" height="553" alt="image" src="https://github.com/user-attachments/assets/ddd08531-b4ca-442d-ab0d-7aa2ef4da33d" />
+    
+    Docker container running :
+    <img width="1600" height="5 53" alt="image" src="https://github.com/user-attachments/assets/ddd08531-b4ca-442d-ab0d-7aa2ef4da33d" />
 
-
-4.  **Create the Kafka Topic**:
+3.  **Create the Kafka Topic**:
+    Once Kafka is running, the topic used for streaming is created inside the Kafka container:
+    
     ```bash
-    # Using the provided script
-    bash scripts/create_topic.sh sport.events
+    docker exec -it kafka kafka-topics --bootstrap-server kafka:9092 `--create --topic sport.events --partitions 1 --replication-factor 1
     ```
-    *Note: If the script fails due to Windows path issues, you can run the docker command directly: `docker exec kafka kafka-topics --bootstrap-server kafka:9092 --create --topic sport.events --partitions 1 --replication-factor 1`*
+    The topic used : 
+    <img width="1600" height="188" alt="image" src="https://github.com/user-attachments/assets/e2ed90e6-ce4b-4d5a-b2bd-4d01bc6bcdd1" />
 
 5.  **Install Python Dependencies**:
     ```bash
@@ -161,6 +165,7 @@ One specific challenge I encountered was connecting to Kafka running in Docker f
 
 ### Visualizing Real-time Data
 Reading scrolling text logs was difficult to follow. I decided to implement a cleaner UI using the `rich` Python library. It allowed me to create a table that updates in place, making it much easier to verify that the "Events per Match" aggregation was actually working correctly in real-time.
+
 
 
 
