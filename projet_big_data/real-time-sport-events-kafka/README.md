@@ -64,6 +64,11 @@ real-time-sport-events-kafka/
 
      ```bash
      docker compose up -d
+     ```
+     This command launches:
+    - ZooKeeper (port 2181)
+    - Kafka broker (internal 9092, external 29092)
+    - Kafka UI (port 8080)
 
 4.  **Create the Kafka Topic**:
     ```bash
@@ -152,6 +157,7 @@ One specific challenge I encountered was connecting to Kafka running in Docker f
 
 ### Visualizing Real-time Data
 Reading scrolling text logs was difficult to follow. I decided to implement a cleaner UI using the `rich` Python library. It allowed me to create a table that updates in place, making it much easier to verify that the "Events per Match" aggregation was actually working correctly in real-time.
+
 
 
 
