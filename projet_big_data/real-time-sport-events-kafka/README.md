@@ -1,4 +1,4 @@
-<img width="1600" height="188" alt="image" src="https://github.com/user-attachments/assets/739474d5-4647-4a4d-8f19-1103be2b15ff" /># Football Events Stream with Kafka
+# Football Events Stream with Kafka
 
 ## Project Overview
 This project implements a **real-time event streaming pipeline** using **Apache Kafka** running on Docker.
@@ -165,6 +165,7 @@ One specific challenge I encountered was connecting to Kafka running in Docker f
 
 ### Visualizing Real-time Data
 Reading scrolling text logs was difficult to follow. I decided to implement a cleaner UI using the `rich` Python library. It allowed me to create a table that updates in place, making it much easier to verify that the "Events per Match" aggregation was actually working correctly in real-time.
+
 
 
 
