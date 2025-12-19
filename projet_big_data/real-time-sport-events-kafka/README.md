@@ -52,24 +52,27 @@ real-time-sport-events-kafka/
 ### 1. Prerequisites
 *   **Docker Desktop** installed and running.
 *   **Python 3.10+**.
-*   **Git Bash** (optional, for shell scripts) or PowerShell.
+*   **Git Bash** (optional, for shell scripts).
+*   **PowerShell** (Windows)
 
-### 2. Setup Steps
+### 2. Docker Stack Setup (Kafka + ZooKeeper)
 1.  **Clone the repository** (or unzip the folder).
-2.  **Start the Docker Stack**:
-    ```bash
-    docker compose up -d
-    ```
-    This launches Zookeeper (port 2181), Kafka (port 9092/29092), and Kafka UI (port 8080).
 
-3.  **Create the Kafka Topic**:
+2.  **Start the Docker Stack**:
+    The Kafka ecosystem is deployed using **Docker Compose**.
+    From the project root directory, run:
+
+     ```bash
+     docker compose up -d
+
+4.  **Create the Kafka Topic**:
     ```bash
     # Using the provided script
     bash scripts/create_topic.sh sport.events
     ```
     *Note: If the script fails due to Windows path issues, you can run the docker command directly: `docker exec kafka kafka-topics --bootstrap-server kafka:9092 --create --topic sport.events --partitions 1 --replication-factor 1`*
 
-4.  **Install Python Dependencies**:
+5.  **Install Python Dependencies**:
     ```bash
     python -m venv .venv
     # Windows:
@@ -149,6 +152,7 @@ One specific challenge I encountered was connecting to Kafka running in Docker f
 
 ### Visualizing Real-time Data
 Reading scrolling text logs was difficult to follow. I decided to implement a cleaner UI using the `rich` Python library. It allowed me to create a table that updates in place, making it much easier to verify that the "Events per Match" aggregation was actually working correctly in real-time.
+
 
 
 
