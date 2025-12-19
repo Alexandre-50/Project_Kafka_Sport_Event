@@ -1,13 +1,18 @@
-# Real-time Sport Events Stream with Kafka
+# Football Events Stream with Kafka
 
 ## Project Overview
 This project implements a **real-time event streaming pipeline** using **Apache Kafka** running on Docker.
-The goal is to simulate a live sports feed (football matches) where events like Goals, Fouls, and Cards are generated in real-time, ingested by Kafka, and processed by a consumer application to display live statistics.
+The goal is to simulate a live sports feed (football matches) where events like goals, fouls, and cards are generated in real-time, ingested by Kafka, and processed by a consumer application to display live statistics.
 
 ## Chosen Tool: Apache Kafka
-I selected **Apache Kafka** for this project because it is the industry standard for building real-time data pipelines and streaming apps.
-*   **Why Kafka?**: It provides high throughput, scalability, and decouples the data producers from the consumers. In a real-world sports analytics context, Kafka allows handling thousands of match events per second reliably.
-*   **Role in Big Data Ecosystem**: Kafka acts as the central nervous system. It ingests high-velocity data (Event Streaming) which can then be consumed by multiple downstream systems (Real-time Dashboards, Data Lakes for historical analysis, Machine Learning models).
+The main Big Data tool used in this project is **Apache Kafka**, combined with **Apache ZooKeeper** for coordination.
+
+Kafka is a **distributed event streaming platform** designed to handle high-throughput, real-time data streams. It is widely used in industry for building data pipelines, streaming analytics, microservices communication, and real-time monitoring systems.
+
+In this project:
+- Kafka acts as the **central message broker**
+- ZooKeeper manages broker coordination and metadata
+- Python applications act as **producer** and **consumer**
 
 ---
 
@@ -136,6 +141,7 @@ One specific challenge I encountered was connecting to Kafka running in Docker f
 
 ### Visualizing Real-time Data
 Reading scrolling text logs was difficult to follow. I decided to implement a cleaner UI using the `rich` Python library. It allowed me to create a table that updates in place, making it much easier to verify that the "Events per Match" aggregation was actually working correctly in real-time.
+
 
 
 
