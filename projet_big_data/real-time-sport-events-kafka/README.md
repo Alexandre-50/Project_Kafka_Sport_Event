@@ -210,23 +210,6 @@ One specific challenge we encountered was connecting to Kafka running in Docker 
     *   `KAFKA_ADVERTISED_LISTENERS: INTERNAL://kafka:9092,EXTERNAL://localhost:29092`
     *   My Python config uses `localhost:29092`.
 
-### Visualizing Real-time Data
-Reading scrolling text logs was difficult to follow. I decided to implement a cleaner UI using the `rich` Python library. It allowed me to create a table that updates in place, making it much easier to verify that the "Events per Match" aggregation was actually working correctly in real-time.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
