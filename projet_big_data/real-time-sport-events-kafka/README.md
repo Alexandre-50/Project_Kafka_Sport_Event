@@ -1,15 +1,15 @@
 # Football Events Stream with Kafka
 
-## Project Overview
+## Project Overview :
 This project implements a **real-time event streaming pipeline** using **Apache Kafka** running on Docker.
 The goal is to simulate a live sports feed (football matches) where events like goals, fouls, and cards are generated in real-time, ingested by Kafka, and processed by a consumer application to display live statistics.
 
-## Chosen Tool: Apache Kafka
+## Chosen Tool : Apache Kafka
 The main Big Data tool used in this project is **Apache Kafka**, combined with **Apache ZooKeeper** for coordination.
 
 Kafka is a **distributed event streaming platform** designed to handle high-throughput, real-time data streams. It is widely used in industry for building data pipelines, streaming analytics, microservices communication, and real-time monitoring systems.
 
-In this project:
+In this project :
 - Kafka acts as the **central message broker**
 - ZooKeeper manages broker coordination and metadata
 - Python applications act as **producer** and **consumer**
@@ -25,7 +25,7 @@ Second, Kafka enforces a **decoupled architecture** between producers and consum
 Finally, Kafka integrates naturally with many other Big Data tools (Spark Streaming, Flink, Hadoop, Data Lakes), making it an excellent foundation for scalable data ecosystems.
 ---
 
-## Folder Structure
+## Folder Structure :
 ```text
 real-time-sport-events-kafka/
 ├─ README.md                # Project documentation
@@ -58,14 +58,14 @@ real-time-sport-events-kafka/
 ### 2. Docker Stack Setup (Kafka + ZooKeeper)
 1.  **Clone the repository** (or unzip the folder).
 
-2.  **Start the Docker Stack**:
+2.  **Start the Docker Stack** :
     The Kafka ecosystem is deployed using **Docker Compose**.
     From the project root directory, run:
 
      ```bash
      docker compose up -d
      ```
-     This command launches:
+     This command launches :
     - ZooKeeper (port 2181)
     - Kafka broker (internal 9092, external 29092)
     - Kafka UI (port 8080)
@@ -76,7 +76,7 @@ real-time-sport-events-kafka/
     Docker container running :
     <img width="1600" height="5 53" alt="image" src="https://github.com/user-attachments/assets/ddd08531-b4ca-442d-ab0d-7aa2ef4da33d" />
 
-3.  **Create the Kafka Topic**:
+3.  **Create the Kafka Topic** :
     Once Kafka is running, the topic used for streaming is created inside the Kafka container:
     
     ```bash
@@ -85,7 +85,7 @@ real-time-sport-events-kafka/
     The topic used : 
     <img width="1600" height="188" alt="image" src="https://github.com/user-attachments/assets/e2ed90e6-ce4b-4d5a-b2bd-4d01bc6bcdd1" />
 
-5.  **Install Python Dependencies**:
+5.  **Install Python Dependencies** :
     ```bash
     python -m venv .venv
     # Windows:
@@ -98,7 +98,7 @@ real-time-sport-events-kafka/
     <img width="1600" height="99" alt="image" src="https://github.com/user-attachments/assets/27e75e7b-c73b-4e5a-9695-06df1593366d" />
 ---
 
-## Minimal Working Example (The Logic)
+## Minimal Working Example :
 The project contains two different Python scripts:
 
 1.  **`Producer (producer_sports.py)`**: It simulates multiple concurrent football matches. Every second, it randomly generates events such as:
@@ -120,13 +120,12 @@ and sends a JSON payload to the `sport.events` topic.
 
 ---
 
-## How to Run (Live Demo)
+## How to Run (Live Demo) :
 We have created a PowerShell script to automate the demonstration and open the necessary terminals.
 
 **Simply run:**
 ```bash
-powershell
-.\scripts\start_demo.ps1
+powershell.\scripts\start_demo.ps1
 ```
 
 This will:
@@ -134,21 +133,21 @@ This will:
 *   Open a **Consumer** window (live dashboard).
 *   Show the Docker status and data log in the main window.
 
-*Alternatively, you can run `python -m src.producer_sports` and `python -m src.consumer_sports` in separate terminals manually.*
-
 ---
 
-## Screenshots of results
+## Screenshots of results :
 
 Since this project runs in a verifiable environment, here are the actual execution logs proving the pipeline works:
 
-### 1. Docker Status (`docker compose ps`)
+### 1. Docker Status (`docker ps`)
 ```text
 NAME                IMAGE                             STATUS
 kafka               confluentinc/cp-kafka:7.6.1       Up
 kafka-ui            provectuslabs/kafka-ui:latest     Up
 zookeeper           confluentinc/cp-zookeeper:7.6.1   Up
 ```
+Docker Container running : 
+<img width="1600" height="553" alt="image" src="https://github.com/user-attachments/assets/a4b5e9ae-6bb0-4f19-a6d7-e4791633fb4d" />
 
 ### 2. Producer Logs (Sample)
 ```text
@@ -182,6 +181,7 @@ One specific challenge I encountered was connecting to Kafka running in Docker f
 
 ### Visualizing Real-time Data
 Reading scrolling text logs was difficult to follow. I decided to implement a cleaner UI using the `rich` Python library. It allowed me to create a table that updates in place, making it much easier to verify that the "Events per Match" aggregation was actually working correctly in real-time.
+
 
 
 
