@@ -158,7 +158,7 @@ Docker Container running :
 [blue]SUBSTITUTION[/blue] in match-2 (min 18)
 ...
 ```
-![WhatsApp Image 2025-12-19 at 14 16 01](https://github.com/user-attachments/assets/67d8dee3-5c78-4d47-8dc3-168537cef0a0)
+Producer terminal running :
 ![WhatsApp Image 2025-12-19 at 14 15 45](https://github.com/user-attachments/assets/f2a00a19-1e7b-465e-af82-2fab41c9ced7)
 
 ### 3. Consumer Data Output (`data/sample_output.jsonl`)
@@ -181,6 +181,7 @@ One specific challenge I encountered was connecting to Kafka running in Docker f
 
 ### Visualizing Real-time Data
 Reading scrolling text logs was difficult to follow. I decided to implement a cleaner UI using the `rich` Python library. It allowed me to create a table that updates in place, making it much easier to verify that the "Events per Match" aggregation was actually working correctly in real-time.
+
 
 
 
