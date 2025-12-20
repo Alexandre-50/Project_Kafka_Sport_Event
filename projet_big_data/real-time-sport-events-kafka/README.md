@@ -120,7 +120,6 @@ and sends a JSON payload to the `sport.events` topic.
 
    Consumer raw events running :
    ![WhatsApp Image 2025-12-19 at 14 15 21](https://github.com/user-attachments/assets/4d687fca-97f8-42c0-be30-d21d25b790d1)
-   
 ---
 
 ## How to Run (Live Demo) :
@@ -183,6 +182,7 @@ One specific challenge I encountered was connecting to Kafka running in Docker f
 
 ### Visualizing Real-time Data
 Reading scrolling text logs was difficult to follow. I decided to implement a cleaner UI using the `rich` Python library. It allowed me to create a table that updates in place, making it much easier to verify that the "Events per Match" aggregation was actually working correctly in real-time.
+
 
 
 
