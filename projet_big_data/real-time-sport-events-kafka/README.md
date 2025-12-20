@@ -172,7 +172,7 @@ Producer terminal running :
 
 ![WhatsApp Image 2025-12-19 at 14 15 45](https://github.com/user-attachments/assets/dbd5d350-0c57-4495-bed6-e17592128301)
 
-### 3. Consumer Data Output (`data/sample_output.jsonl`)
+### 3. Consumer Output results :
 The consumer displays a live table showing:
 
   - Total events processed
@@ -186,7 +186,21 @@ Distribution by event type :
 <img width="1599" height="379" alt="image" src="https://github.com/user-attachments/assets/fabd036c-26ea-424c-9921-9a3f91e83baa" />
 
 ---
+## How Kafka Fits into a Big Data Ecosystem : 
 
+Kafka acts as the ingestion and streaming layer of a Big Data architecture.
+
+ - In a real-world system:
+
+ - Producers ingest high-velocity data
+
+ - Kafka stores and streams data reliably
+
+ - Consumers process data in real time or batch mode
+
+ - Downstream systems (Spark, Hadoop, ML pipelines, Data Lakes) consume Kafka topics
+
+Kafka ensures scalability, fault tolerance, and real-time processing, which are essential characteristics of Big Data systems.
 ## Challenges & My Setup Notes
 
 ### Docker Networking on Windows
@@ -198,6 +212,7 @@ One specific challenge we encountered was connecting to Kafka running in Docker 
 
 ### Visualizing Real-time Data
 Reading scrolling text logs was difficult to follow. I decided to implement a cleaner UI using the `rich` Python library. It allowed me to create a table that updates in place, making it much easier to verify that the "Events per Match" aggregation was actually working correctly in real-time.
+
 
 
 
