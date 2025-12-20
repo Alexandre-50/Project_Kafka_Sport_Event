@@ -112,12 +112,16 @@ The project contains two different Python scripts:
     - SUBSTITUTION
 and sends a JSON payload to the `sport.events` topic.
 
-2.  **`Consumer (consumer_sports.py)`**: Listens to the topic. It displays a **Live Dashboard** in the terminal using the `rich` library to show real-time stats (events per match, distribution of fouls/goals) and saves the raw data to `data/sample_output.jsonl`.
+2.  **`Consumer (consumer_sports.py)`**:
+   The consumer subscribes to the same topic and:
+   - Displays a real-time dashboard in the terminal using the rich library
+   - Aggregates statistics (events per match, event distribution)
+   - Writes raw events to data/sample_output.jsonl
 
 ---
 
 ## How to Run (Live Demo)
-I have created a PowerShell script to automate the demonstration and open the necessary terminals.
+We have created a PowerShell script to automate the demonstration and open the necessary terminals.
 
 **Simply run:**
 ```powershell
@@ -133,7 +137,7 @@ This will:
 
 ---
 
-## Proof of Execution (Logs)
+## Screenshots of results
 
 Since this project runs in a verifiable environment, here are the actual execution logs proving the pipeline works:
 
@@ -177,6 +181,7 @@ One specific challenge I encountered was connecting to Kafka running in Docker f
 
 ### Visualizing Real-time Data
 Reading scrolling text logs was difficult to follow. I decided to implement a cleaner UI using the `rich` Python library. It allowed me to create a table that updates in place, making it much easier to verify that the "Events per Match" aggregation was actually working correctly in real-time.
+
 
 
 
