@@ -124,7 +124,8 @@ and sends a JSON payload to the `sport.events` topic.
 We have created a PowerShell script to automate the demonstration and open the necessary terminals.
 
 **Simply run:**
-```powershell
+```bash
+powershell
 .\scripts\start_demo.ps1
 ```
 
@@ -181,6 +182,7 @@ One specific challenge I encountered was connecting to Kafka running in Docker f
 
 ### Visualizing Real-time Data
 Reading scrolling text logs was difficult to follow. I decided to implement a cleaner UI using the `rich` Python library. It allowed me to create a table that updates in place, making it much easier to verify that the "Events per Match" aggregation was actually working correctly in real-time.
+
 
 
 
