@@ -181,7 +181,7 @@ The consumer displays a live table showing:
   - Events per match
 
 Distribution by event type :
-![WhatsApp Image 2025-12-19 at 14 15 21](https://github.com/user-attachments/assets/1fb4974f-b4e7-4280-b830-938516c4519c)
+<img width="1599" height="379" alt="image" src="https://github.com/user-attachments/assets/fabd036c-26ea-424c-9921-9a3f91e83baa" />
 
 ---
 
@@ -196,6 +196,7 @@ One specific challenge we encountered was connecting to Kafka running in Docker 
 
 ### Visualizing Real-time Data
 Reading scrolling text logs was difficult to follow. I decided to implement a cleaner UI using the `rich` Python library. It allowed me to create a table that updates in place, making it much easier to verify that the "Events per Match" aggregation was actually working correctly in real-time.
+
 
 
 
