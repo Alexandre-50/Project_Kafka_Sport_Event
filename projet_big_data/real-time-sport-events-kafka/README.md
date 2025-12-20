@@ -118,10 +118,15 @@ and sends a JSON payload to the `sport.events` topic.
    - Aggregates statistics (events per match, event distribution)
    - Writes raw events to data/sample_output.jsonl
 
+   ```json
+    {"event_id": "70d2633...", "event_type": "GOAL", "match_id": "match-1", "minute": 12, "payload": {"scorer": "Player A"}}
+    {"event_id": "81a9241...", "event_type": "FOUL", "match_id": "match-2", "minute": 13, "payload": {"severity": "high"}}
+    {"event_id": "92b1562...", "event_type": "YELLOW_CARD", "match_id": "match-1", "minute": 15, "payload": {"reason": "tackle"}}
+   ```
+   
    **Consumer raw events running :**
 
-<img width="600" height="569" alt="Consumer raw events" src="https://github.com/user-attachments/assets/35a2ca17-82fd-486e-bb85-d6462f6afbbf" />
-
+   <img width="600" height="569" alt="Consumer raw events" src="https://github.com/user-attachments/assets/35a2ca17-82fd-486e-bb85-d6462f6afbbf" />
 
 ---
 
@@ -154,7 +159,7 @@ zookeeper           confluentinc/cp-zookeeper:7.6.1   Up
 Docker Container running : 
 <img width="1600" height="553" alt="image" src="https://github.com/user-attachments/assets/a4b5e9ae-6bb0-4f19-a6d7-e4791633fb4d" />
 
-### 2. Producer Logs (Sample)
+### 2. Producer results : 
 ```text
 [producer] bootstrap=localhost:29092 topic=sport.events
 [producer] generating ~3 events/s across 5 matches
@@ -164,20 +169,26 @@ Docker Container running :
 ...
 ```
 Producer terminal running :
+![WhatsApp Image 2025-12-19 at 14 15 45](https://github.com/user-attachments/assets/6c5431e0-a980-4624-a5a1-8e0f6828b1bf)
 
 ### 3. Consumer Data Output (`data/sample_output.jsonl`)
-```json
-{"event_id": "70d2633...", "event_type": "GOAL", "match_id": "match-1", "minute": 12, "payload": {"scorer": "Player A"}}
-{"event_id": "81a9241...", "event_type": "FOUL", "match_id": "match-2", "minute": 13, "payload": {"severity": "high"}}
-{"event_id": "92b1562...", "event_type": "YELLOW_CARD", "match_id": "match-1", "minute": 15, "payload": {"reason": "tackle"}}
-```
+The consumer displays a live table showing:
+
+  - Total events processed
+
+  - Last event received
+
+  - Events per match
+
+Distribution by event type :
 ![WhatsApp Image 2025-12-19 at 14 15 21](https://github.com/user-attachments/assets/1fb4974f-b4e7-4280-b830-938516c4519c)
+
 ---
 
 ## Challenges & My Setup Notes
 
 ### Docker Networking on Windows
-One specific challenge I encountered was connecting to Kafka running in Docker from my local Python scripts running on Windows.
+One specific challenge we encountered was connecting to Kafka running in Docker from our local Python scripts running on Windows in our laptops.
 *   **Problem**: Initially, I got `NoBrokersAvailable`.
 *   **Solution**: I learned about **Advertised Listeners**. I configured `docker-compose.yml` to expose port `29092` to the host (`EXTERNAL`) while keeping `9092` for internal Docker communication (`INTERNAL`).
     *   `KAFKA_ADVERTISED_LISTENERS: INTERNAL://kafka:9092,EXTERNAL://localhost:29092`
@@ -185,6 +196,7 @@ One specific challenge I encountered was connecting to Kafka running in Docker f
 
 ### Visualizing Real-time Data
 Reading scrolling text logs was difficult to follow. I decided to implement a cleaner UI using the `rich` Python library. It allowed me to create a table that updates in place, making it much easier to verify that the "Events per Match" aggregation was actually working correctly in real-time.
+
 
 
 
