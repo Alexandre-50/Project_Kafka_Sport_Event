@@ -99,9 +99,9 @@ real-time-sport-events-kafka/
 ---
 
 ## Minimal Working Example (The Logic)
-The project consists of two main Python scripts:
+The project contains two different Python scripts:
 
-1.  **`producer_sports.py`**: Simulates 5 concurrent football matches. It picks a random match and event type (e.g., "GOAL" for PSG vs Real Madrid) and sends a JSON payload to the `sport.events` topic.
+1.  **`Producer (producer_sports.py)`**: Simulates 5 concurrent football matches. It picks a random match and event type (e.g., "GOAL" for PSG vs Real Madrid) and sends a JSON payload to the `sport.events` topic.
 2.  **`consumer_sports.py`**: Listens to the topic. It displays a **Live Dashboard** in the terminal using the `rich` library to show real-time stats (events per match, distribution of fouls/goals) and saves the raw data to `data/sample_output.jsonl`.
 
 ---
@@ -167,6 +167,7 @@ One specific challenge I encountered was connecting to Kafka running in Docker f
 
 ### Visualizing Real-time Data
 Reading scrolling text logs was difficult to follow. I decided to implement a cleaner UI using the `rich` Python library. It allowed me to create a table that updates in place, making it much easier to verify that the "Events per Match" aggregation was actually working correctly in real-time.
+
 
 
 
