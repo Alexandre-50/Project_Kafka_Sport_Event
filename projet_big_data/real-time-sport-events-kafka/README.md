@@ -118,6 +118,9 @@ and sends a JSON payload to the `sport.events` topic.
    - Aggregates statistics (events per match, event distribution)
    - Writes raw events to data/sample_output.jsonl
 
+   Consumer raw events running :
+   ![WhatsApp Image 2025-12-19 at 14 15 21](https://github.com/user-attachments/assets/56564b02-f477-45b6-9a2e-1f79e763c67c)
+   
 ---
 
 ## How to Run (Live Demo) :
@@ -159,7 +162,6 @@ Docker Container running :
 ...
 ```
 Producer terminal running :
-![WhatsApp Image 2025-12-19 at 14 15 45](https://github.com/user-attachments/assets/f2a00a19-1e7b-465e-af82-2fab41c9ced7)
 
 ### 3. Consumer Data Output (`data/sample_output.jsonl`)
 ```json
@@ -181,6 +183,7 @@ One specific challenge I encountered was connecting to Kafka running in Docker f
 
 ### Visualizing Real-time Data
 Reading scrolling text logs was difficult to follow. I decided to implement a cleaner UI using the `rich` Python library. It allowed me to create a table that updates in place, making it much easier to verify that the "Events per Match" aggregation was actually working correctly in real-time.
+
 
 
 
