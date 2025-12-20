@@ -169,7 +169,7 @@ Docker Container running :
 ...
 ```
 Producer terminal running :
-![WhatsApp Image 2025-12-19 at 14 15 45](https://github.com/user-attachments/assets/6c5431e0-a980-4624-a5a1-8e0f6828b1bf)
+![WhatsApp Image 2025-12-19 at 14 15 45](https://github.com/user-attachments/assets/dbd5d350-0c57-4495-bed6-e17592128301)
 
 ### 3. Consumer Data Output (`data/sample_output.jsonl`)
 The consumer displays a live table showing:
@@ -196,6 +196,7 @@ One specific challenge we encountered was connecting to Kafka running in Docker 
 
 ### Visualizing Real-time Data
 Reading scrolling text logs was difficult to follow. I decided to implement a cleaner UI using the `rich` Python library. It allowed me to create a table that updates in place, making it much easier to verify that the "Events per Match" aggregation was actually working correctly in real-time.
+
 
 
 
