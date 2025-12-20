@@ -85,7 +85,7 @@ real-time-sport-events-kafka/
     The topic used : 
     <img width="1600" height="188" alt="image" src="https://github.com/user-attachments/assets/e2ed90e6-ce4b-4d5a-b2bd-4d01bc6bcdd1" />
 
-5.  **Install Python Dependencies** :
+4.  **Install Python Dependencies** :
     ```bash
     python -m venv .venv
     # Windows:
@@ -112,14 +112,16 @@ The project contains two different Python scripts:
     - SUBSTITUTION
 and sends a JSON payload to the `sport.events` topic.
 
-2.  **`Consumer (consumer_sports.py)`**:
+2. **`Consumer (consumer_sports.py)`**  
    The consumer subscribes to the same topic and:
    - Displays a real-time dashboard in the terminal using the rich library
    - Aggregates statistics (events per match, event distribution)
    - Writes raw events to data/sample_output.jsonl
 
-   Consumer raw events running :
-   <img width="600" height="569" alt="image" src="https://github.com/user-attachments/assets/35a2ca17-82fd-486e-bb85-d6462f6afbbf" />
+   **Consumer raw events running :**
+
+<img width="600" height="569" alt="Consumer raw events" src="https://github.com/user-attachments/assets/35a2ca17-82fd-486e-bb85-d6462f6afbbf" />
+
 
 ---
 
@@ -183,6 +185,7 @@ One specific challenge I encountered was connecting to Kafka running in Docker f
 
 ### Visualizing Real-time Data
 Reading scrolling text logs was difficult to follow. I decided to implement a cleaner UI using the `rich` Python library. It allowed me to create a table that updates in place, making it much easier to verify that the "Events per Match" aggregation was actually working correctly in real-time.
+
 
 
 
