@@ -23,6 +23,7 @@ First, Kafka is a **core technology in modern Big Data architectures**. It is de
 Second, Kafka enforces a **decoupled architecture** between producers and consumers. In this project, the event generator does not need to know how the data is consumed. This separation mirrors real-world systems where the same data stream can be consumed by dashboards, databases, or machine learning pipelines simultaneously.
 
 Finally, Kafka integrates naturally with many other Big Data tools (Spark Streaming, Flink, Hadoop, Data Lakes), making it an excellent foundation for scalable data ecosystems.
+
 ---
 
 ## Folder Structure :
