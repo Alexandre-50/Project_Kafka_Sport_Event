@@ -1,6 +1,6 @@
 # Football Events Stream with Kafka
 
-## Project Overview :
+## Project Description :
 This project implements a **real-time event streaming pipeline** using **Apache Kafka** running on Docker.
 The goal is to simulate a live sports feed (football matches) where events like goals, fouls, and cards are generated in real-time, ingested by Kafka, and processed by a consumer application to display live statistics.
 
