@@ -74,9 +74,6 @@ real-time-sport-events-kafka/
     Launching Docker with container Kafka, Zookeeper :
     <img width="1600" height="896" alt="image" src="https://github.com/user-attachments/assets/eff6d959-ea59-4df9-b983-540e8a91bd18" />
     
-    Docker container running :
-    <img width="1600" height="5 53" alt="image" src="https://github.com/user-attachments/assets/ddd08531-b4ca-442d-ab0d-7aa2ef4da33d" />
-
 3.  **Create the Kafka Topic** :
     Once Kafka is running, the topic used for streaming is created inside the Kafka container:
     
