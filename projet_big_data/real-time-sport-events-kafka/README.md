@@ -135,7 +135,8 @@ We have created a PowerShell script to automate the demonstration and open the n
 
 **Simply run:**
 ```bash
-powershell.\scripts\start_demo.ps1
+cd real-time-sport-events-kafka
+.\scripts\start_demo.ps1
 ```
 
 This will:
@@ -209,6 +210,7 @@ One specific challenge we encountered was connecting to Kafka running in Docker 
 *   **Solution**: I learned about **Advertised Listeners**. I configured `docker-compose.yml` to expose port `29092` to the host (`EXTERNAL`) while keeping `9092` for internal Docker communication (`INTERNAL`).
     *   `KAFKA_ADVERTISED_LISTENERS: INTERNAL://kafka:9092,EXTERNAL://localhost:29092`
     *   My Python config uses `localhost:29092`.
+
 
 
 
